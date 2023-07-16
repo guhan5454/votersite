@@ -8,19 +8,36 @@
 }
 
 html {
-  height: 100%;
+  height: auto;
   /*Image only BG fallback*/
   /*background = gradient + image pattern combo*/
   background: linear-gradient(#B4C4DB,#164A8F,#B31F25);
 }
 
+
 body {
   font-family: 'Montserrat', Arial, Verdana;
 }
 
+.profile{
+  width: 100px;
+  height: 100px;
+  padding-right: 10px;
+}
+
+.radioButton{
+  margin-left: 100px;
+}
+
+.inputfield{
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
 /*form styles*/
 #msform {
-  width: 400px;
+  width: 1000px;
   margin: 50px auto;
   text-align: center;
   position: relative;
@@ -109,7 +126,7 @@ body {
   width: 33.33%;
   float: left;
   position: relative;
-}
+} 
 
 #progressbar li:before {
   content: counter(step);
@@ -126,6 +143,7 @@ body {
 
 /*progressbar connectors*/
 #progressbar li:after {
+  /* flex-direction: row; */
   content: '';
   width: 100%;
   height: 2px;
@@ -136,6 +154,8 @@ body {
   z-index: -1;
   /*put it behind the numbers*/
 }
+
+
 
 #progressbar li:first-child:after {
   /*connector not needed before the first step*/
