@@ -8,12 +8,17 @@
 }
 
 html {
-  height: auto;
+  height: 100%;
   /*Image only BG fallback*/
   /*background = gradient + image pattern combo*/
   background: linear-gradient(#B4C4DB,#164A8F,#B31F25);
 }
 
+.headerLogo{
+  width: 120px;
+  height: 120px;
+  padding-bottom: 20px;
+}
 
 body {
   font-family: 'Montserrat', Arial, Verdana;
@@ -21,21 +26,62 @@ body {
 }
 
 .profile{
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   padding-right: 10px;
 }
 
 .radioButton{
-  margin-left: 100px;
+  /* margin-right: px; */
+  /* margin-left: auto; */
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  /* align-content: flex-start; */
+}
+
+.buttonContainer{
+  display: flex;
+  /* padding-left: 100px; */
+  flex-direction: column;
+  /* background-color: #164A8F; */
+  /* justify-content: flex-end; */
 }
 
 .inputfield{
   display: flex;
   align-items: center;
   padding-top: 10px;
+  /* justify-content: flex-end; */
+  /* justify-content:space-between; */
 }
 
+.table {
+  width: 100%;
+  /* border-collapse: collapse; */
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+
+.tableHead th {
+  background-color: #d6454a;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  
+  }
+
+.tableBody td {
+  padding: 10px;
+}
+
+.tableBody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tableBody tr:hover {
+  background-color: #eaeaea;
+}
 /*form styles*/
 #msform {
   flex-wrap: nowrap;
@@ -55,6 +101,7 @@ body {
   box-sizing: border-box;
   width: 80%;
   margin: 0 10%;
+  /* justify-content: space-between; */
   /*stacking fieldsets above each other*/
   position: relative;
 }
@@ -126,7 +173,7 @@ body {
   color: white;
   text-transform: uppercase;
   font-size: 9px;
-  width: 16.6%;
+  width: 14.2%;
   float: left;
   position: relative;
 } 
