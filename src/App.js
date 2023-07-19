@@ -3,8 +3,11 @@ import './App.css';
 import axios from 'axios'
 import logo from './Assests/blank-profile-picture-973460_1280.webp'
 import sankaralogo from './Assests/sankaralogo.png'
+import useSound from 'use-sound';
+import beep from './Assests/bleep.mp3' 
 
 const App = () => {
+  const [play] = useSound(beep);
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedPerson, setSelectedPerson] = useState({
     chairman:'',
@@ -65,8 +68,7 @@ const App = () => {
   const handleSubmit = async() => {
     try {
       // Make an HTTP POST request to the backend endpoint
-      await axios.post('http://localhost:3001/data', selectedPerson);
-
+      await axios.post('https://f338-49-206-118-6.ngrok-free.app/data', selectedPerson);
       console.log('Data posted successfully');
       setCurrentStep((prevStep)=> prevStep +1)
 
@@ -100,6 +102,7 @@ const App = () => {
                 </label>
                 <input type="radio" name="Dhanush" value="Dhanush" className="radioButton" checked={selectedPerson.chairman === "Dhanush"} onChange={handleChairman}  />
               </div>
+              
  
             </div>
             <input type="button" name="next" className="next action-button" value="Next" onClick={handleNext} />
@@ -281,7 +284,7 @@ const App = () => {
       case 8:
         return(
           <fieldset>
-             <h2 className="fs-title">Your Votes</h2>
+             <h2 className="fs-title">Your Voting is recorded</h2>
              
           </fieldset>
         )
@@ -289,7 +292,7 @@ const App = () => {
         return(
           <fieldset>
               <h2 className="fs-title">Error Submitting the vote</h2>
-              
+              <button onClick={play}>Boop!</button>;
           </fieldset>
         )
       default:
