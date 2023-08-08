@@ -69,6 +69,7 @@ const App = () => {
 
   const handleSubmit = async() => {
     try {
+      play()
       // Make an HTTP POST request to the backend endpoint
       await axios.post('http://localhost:3001/data', selectedPerson);
       console.log('Data posted successfully');
