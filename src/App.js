@@ -7,6 +7,7 @@ import useSound from 'use-sound';
 import beep from './Assests/bleep.mp3' 
 import wrong from './Assests/red-cross-mark-icon-negative-choice-symbol-sign-app-button_744955-339.avif'
 import tickmark from './Assests/green-check-mark-icon-symbol-logo-circle-tick-symbol-green-color-vector-illustration_685751-503.avif'
+import images from './Images';
 
 const App = () => {
   const [play] = useSound(beep);
@@ -88,36 +89,43 @@ const App = () => {
       case 1:
         return (
           <fieldset>
-            <h2 className="fs-title">Chairman</h2>
+            <h2 className="fs-title">President</h2>
             <h3 className="fs-subtitle">Select any one</h3>
             <div className='buttonContainer'>
               <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Guhan
+                <img alt=''  className='profile' src={images.TheebanPresident} ></img>
+                <label className='namefield'  >
+                  Theeban Anand
                 </label>
-                <input type="radio" name="Guhan" value="Guhan" className="radioButton" checked={selectedPerson.chairman === "Guhan"} onChange={handleChairman}  />
+                <input type="radio" name="Theeban" value="Theeban" className="radioButton" checked={selectedPerson.chairman === "Theeban"} onChange={handleChairman}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.PramodhPresident} ></img>
+                <label className='namefield'>
+                  Pramodh 
+                </label>
+                <input type="radio" name="Pramodh" value="Pramodh" className="radioButton" checked={selectedPerson.chairman === "Pramodh"} onChange={handleChairman}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.MadhanrajPresident} ></img>
+                <label className='namefield'>
+                  Madhanraj
+                </label>
+                <input type="radio" name="Madhanraj" value="Madhanraj" className="radioButton" checked={selectedPerson.chairman === "Madhanraj"} onChange={handleChairman}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.KarthikPresident} ></img>
+                <label className='namefield'>
+                  Karthik
+                </label>
+                <input type="radio" name="Karthik" value="Karthik" className="radioButton" checked={selectedPerson.chairman === "Karthik"} onChange={handleChairman}  />
               </div>
               <div className='inputfield'>
                 <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Sruthi
+                <label className='namefield'>
+                  N O T A
                 </label>
-                <input type="radio" name="Sruthi" value="Sruthi" className="radioButton" checked={selectedPerson.chairman === "Sruthi"} onChange={handleChairman}  />
-              </div>
-              <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Sanjeev
-                </label>
-                <input type="radio" name="Sanjeev" value="Sanjeev" className="radioButton" checked={selectedPerson.chairman === "Sanjeev"} onChange={handleChairman}  />
-              </div>
-              <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Dhanush
-                </label>
-                <input type="radio" name="Dhanush" value="Dhanush" className="radioButton" checked={selectedPerson.chairman === "Dhanush"} onChange={handleChairman}  />
+                <input type="radio" name="NOTA1" value="NOTA1" className="radioButton" checked={selectedPerson.chairman === "NOTA1"} onChange={handleChairman}  />
               </div>
               
  
@@ -128,29 +136,36 @@ const App = () => {
       case 2:
         return (
           <fieldset>
-            <h2 className="fs-title">Vice Chairman</h2>
+            <h2 className="fs-title">Vice President</h2>
             <h3 className="fs-subtitle">Select any one</h3>
             <div className='buttonContainer'>
               <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Subbu
+                <img alt=''  className='profile' src={images.NavaneethVP} ></img>
+                <label className='namefield'>
+                  Navaneeth
                 </label>
-                <input type="radio" name="Subbu" value="Subbu" className="radioButton" checked={selectedPerson.viceChairman === "Subbu"} onChange={handleViceChairman}  />
+                <input type="radio" name="Navaneeth" value="Navaneeth" className="radioButton" checked={selectedPerson.viceChairman === "Navaneeth"} onChange={handleViceChairman}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.PreethikaVP} ></img>
+                <label className='namefield'>
+                  Preethika
+                </label>
+                <input type="radio" name="Preethika" value="Preethika" className="radioButton" checked={selectedPerson.viceChairman === "Preethika"} onChange={handleViceChairman}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.KaviPriyaVP} ></img>
+                <label className='namefield'>
+                  Kavi Priya
+                </label>
+                <input type="radio" name="KaviPriya" value="KaviPriya" className="radioButton" checked={selectedPerson.viceChairman === "KaviPriya"} onChange={handleViceChairman}  />
               </div>
               <div className='inputfield'>
                 <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Vasanth
+                <label className='namefield'>
+                  N O T A
                 </label>
-                <input type="radio" name="Vasanth" value="Vasanth" className="radioButton" checked={selectedPerson.viceChairman === "Vasanth"} onChange={handleViceChairman}  />
-              </div>
-              <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Nandana
-                </label>
-                <input type="radio" name="Nandana" value="Nandana" className="radioButton" checked={selectedPerson.viceChairman === "Nandana"} onChange={handleViceChairman}  />
+                <input type="radio" name="NOTA2" value="NOTA2" className="radioButton" checked={selectedPerson.chairman === "NOTA2"} onChange={handleChairman}  />
               </div>
  
             </div>
@@ -166,39 +181,25 @@ const App = () => {
           <h3 className="fs-subtitle">Select any one</h3> 
            <div className='buttonContainer'>
               <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Safeek
+                <img alt=''  className='profile' src={images.PraneethaSecretary} ></img>
+                <label className='namefield'>
+                  Praneetha
                 </label>
-                <input type="radio" name="Safeek" value="Safeek" className="radioButton" checked={selectedPerson.secretary === "Safeek"} onChange={handleSecretary}  />
+                <input type="radio" name="Praneetha" value="Praneetha" className="radioButton" checked={selectedPerson.secretary === "Praneetha"} onChange={handleSecretary}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.MouliSecretary} ></img>
+                <label className='namefield'>
+                  Mouli
+                </label>
+                <input type="radio" name="Mouli" value="Mouli" className="radioButton" checked={selectedPerson.secretary === "Mouli"} onChange={handleSecretary}  />
               </div>
               <div className='inputfield'>
                 <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Nithin
+                <label className='namefield'>
+                  N O T A
                 </label>
-                <input type="radio" name="Nithin" value="Nithin" className="radioButton" checked={selectedPerson.secretary === "Nithin"} onChange={handleSecretary}  />
-              </div>
-              <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Sherin
-                </label>
-                <input type="radio" name="Sherin" value="Sherin" className="radioButton" checked={selectedPerson.secretary === "Sherin"} onChange={handleSecretary}  />
-              </div>
-              <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Abiya
-                </label>
-                <input type="radio" name="Abiya" value="Abiya" className="radioButton" checked={selectedPerson.secretary === "Abiya"} onChange={handleSecretary}  />
-              </div>
-              <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Sihla
-                </label>
-                <input type="radio" name="Sihla" value="Sihla" className="radioButton" checked={selectedPerson.secretary === "Sihla"} onChange={handleSecretary}  />
+                <input type="radio" name="NOTA3" value="NOTA3" className="radioButton" checked={selectedPerson.chairman === "NOTA3"} onChange={handleChairman}  />
               </div>
  
             </div>
@@ -213,25 +214,39 @@ const App = () => {
           <h3 className="fs-subtitle">Select any one</h3> 
           <div className='buttonContainer'>
               <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Monisha
+                <img alt=''  className='profile' src={images.SaranyaJS} ></img>
+                <label className='namefield'>
+                  Saranya
                 </label>
-                <input type="radio" name="Monisha" value="Monisha" className="radioButton" checked={selectedPerson.jointSecretary === "Monisha"} onChange={handleJointSecretary}  />
+                <input type="radio" name="Saranya" value="Saranya" className="radioButton" checked={selectedPerson.jointSecretary === "Saranya"} onChange={handleJointSecretary}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.MadhumithaJS} ></img>
+                <label className='namefield'>
+                  Madhumitha
+                </label>
+                <input type="radio" name="Madhumitha" value="Madhumitha" className="radioButton" checked={selectedPerson.jointSecretary === "Madhumitha"} onChange={handleJointSecretary}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.AkashJS} ></img>
+                <label className='namefield'>
+                  Akash
+                </label>
+                <input type="radio" name="Akash" value="Akash" className="radioButton" checked={selectedPerson.jointSecretary === "Akash"} onChange={handleJointSecretary}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.KrithikaJS} ></img>
+                <label className='namefield'>
+                  Kiruthika
+                </label>
+                <input type="radio" name="Kiruthika" value="Kiruthika" className="radioButton" checked={selectedPerson.jointSecretary === "Kiruthika"} onChange={handleJointSecretary}  />
               </div>
               <div className='inputfield'>
                 <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Tharun
+                <label className='namefield'>
+                  N O T A
                 </label>
-                <input type="radio" name="Tharun" value="Tharun" className="radioButton" checked={selectedPerson.jointSecretary === "Tharun"} onChange={handleJointSecretary}  />
-              </div>
-              <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Suganya
-                </label>
-                <input type="radio" name="Suganya" value="Suganya" className="radioButton" checked={selectedPerson.jointSecretary === "Suganya"} onChange={handleJointSecretary}  />
+                <input type="radio" name="NOTA4" value="NOTA4" className="radioButton" checked={selectedPerson.chairman === "NOTA4"} onChange={handleChairman}  />
               </div>
  
             </div>
@@ -246,25 +261,46 @@ const App = () => {
           <h3 className="fs-subtitle">Select any one</h3> 
            <div className='buttonContainer'>
               <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Sundar
+                <img alt=''  className='profile' src={images.RudhraCS} ></img>
+                <label className='namefield'>
+                  Ruthra
                 </label>
-                <input type="radio" name="Sundar" value="Sundar" className="radioButton" checked={selectedPerson.culturalSecretary === "Sundar"} onChange={handleCulturalSecretary}  />
+                <input type="radio" name="Ruthra" value="Ruthra" className="radioButton" checked={selectedPerson.culturalSecretary === "Ruthra"} onChange={handleCulturalSecretary}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.RaziyaBegamCS} ></img>
+                <label className='namefield'>
+                  RaziyaBegam
+                </label>
+                <input type="radio" name="RaziyaBegam" value="RaziyaBegam" className="radioButton" checked={selectedPerson.culturalSecretary === "RaziyaBegam"} onChange={handleCulturalSecretary}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.RejiCS} ></img>
+                <label className='namefield'>
+                  Riji
+                </label>
+                <input type="radio" name="Riji" value="Riji" className="radioButton" checked={selectedPerson.culturalSecretary === "Riji"} onChange={handleCulturalSecretary}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.SathyadeviCS} ></img>
+                <label className='namefield'>
+                  Sathyadevi
+                </label>
+                <input type="radio" name="Sathyadevi" value="Sathyadevi" className="radioButton" checked={selectedPerson.culturalSecretary === "Sathyadevi"} onChange={handleCulturalSecretary}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.NehaCS} ></img>
+                <label className='namefield'>
+                  Neha Kumari
+                </label>
+                <input type="radio" name="Neha" value="Neha" className="radioButton" checked={selectedPerson.culturalSecretary === "Neha"} onChange={handleCulturalSecretary}  />
               </div>
               <div className='inputfield'>
                 <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Charan
+                <label className='namefield'>
+                  N O T A
                 </label>
-                <input type="radio" name="Charan" value="Charan" className="radioButton" checked={selectedPerson.culturalSecretary === "Charan"} onChange={handleCulturalSecretary}  />
-              </div>
-              <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Yogesh
-                </label>
-                <input type="radio" name="Yogesh" value="Yogesh" className="radioButton" checked={selectedPerson.culturalSecretary === "Yogesh"} onChange={handleCulturalSecretary}  />
+                <input type="radio" name="NOTA5" value="NOTA5" className="radioButton" checked={selectedPerson.chairman === "NOTA5"} onChange={handleChairman}  />
               </div>
  
             </div>
@@ -279,25 +315,39 @@ const App = () => {
           <h3 className="fs-subtitle">Select any one</h3> 
            <div className='buttonContainer'>
               <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Krishna
+                <img alt=''  className='profile' src={images.ShriranjaniSS} ></img>
+                <label className='namefield'>
+                  Shriranjani
                 </label>
-                <input type="radio" name="Krishna" value="Krishna" className="radioButton" checked={selectedPerson.sportsSecretary === "Krishna"} onChange={handleSportsSecretary}  />
+                <input type="radio" name="Shriranjani" value="Shriranjani" className="radioButton" checked={selectedPerson.sportsSecretary === "Shriranjani"} onChange={handleSportsSecretary}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.NarmathaSS} ></img>
+                <label className='namefield'>
+                  Namratha
+                </label>
+                <input type="radio" name="Namratha" value="Namratha" className="radioButton" checked={selectedPerson.sportsSecretary === "Namratha"} onChange={handleSportsSecretary}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.TheerthaSS} ></img>
+                <label className='namefield'>
+                  Theertha
+                </label>
+                <input type="radio" name="Theertha" value="Theertha" className="radioButton" checked={selectedPerson.sportsSecretary === "Theertha"} onChange={handleSportsSecretary}  />
+              </div>
+              <div className='inputfield'>
+                <img alt=''  className='profile' src={images.KalaiSuryaSS} ></img>
+                <label className='namefield'>
+                  KalaiSurya
+                </label>
+                <input type="radio" name="KalaiSurya" value="KalaiSurya" className="radioButton" checked={selectedPerson.sportsSecretary === "KalaiSurya"} onChange={handleSportsSecretary}  />
               </div>
               <div className='inputfield'>
                 <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Keerthi
+                <label className='namefield'>
+                  N O T A
                 </label>
-                <input type="radio" name="Keerthi" value="Keerthi" className="radioButton" checked={selectedPerson.sportsSecretary === "Keerthi"} onChange={handleSportsSecretary}  />
-              </div>
-              <div className='inputfield'>
-                <img alt=''  className='profile' src={logo} ></img>
-                <label>
-                  Kannan
-                </label>
-                <input type="radio" name="Kannan" value="Kannan" className="radioButton" checked={selectedPerson.sportsSecretary === "Kannan"} onChange={handleSportsSecretary}  />
+                <input type="radio" name="NOTA6" value="NOTA6" className="radioButton" checked={selectedPerson.chairman === "NOTA6"} onChange={handleChairman}  />
               </div>
  
             </div>
@@ -344,6 +394,7 @@ const App = () => {
             </tr>
             </tbody>
           </table>
+          <input type="button" name="previous" className="previous action-button" value="Previous" onClick={handlePrevious} />
           <input type="button" name="submit" className="next action-button" value="Submit" onClick={handleSubmit} />
           </fieldset>
           )

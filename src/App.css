@@ -8,10 +8,14 @@
 }
 
 html {
-  height: auto;
+  height: 120%;
   /*Image only BG fallback*/
   /*background = gradient + image pattern combo*/
   background: linear-gradient(#B4C4DB,#164A8F,#B31F25);
+}
+
+.namefield {
+  width: 60px;
 }
 
 .tickmark{
